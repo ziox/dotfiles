@@ -42,6 +42,16 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 "
 Plugin 'matchit.zip'
 
+"
+" Ack!
+"
+Plugin 'mileszs/ack.vim'
+
+"
+" Ag!
+"
+Plugin 'rking/ag.vim'
+
 
 " ============================================================================
 
