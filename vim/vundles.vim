@@ -52,6 +52,11 @@ Plugin 'mileszs/ack.vim'
 "
 Plugin 'rking/ag.vim'
 
+"
+" fugitive.vim may very well be the best Git wrapper of all time
+"
+Plugin 'tpope/vim-fugitive'
+
 
 " ============================================================================
 
