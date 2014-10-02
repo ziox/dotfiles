@@ -245,7 +245,7 @@ map <S-L> gt
 nnoremap <leader>x :%s//<left>
 
 " Toggle search highlighting
-nmap <silent> <leader><space> :nohlsearch<CR>
+nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 
 " Quickly move line up and down
 nnoremap <D-j> :m+<CR>==
