@@ -257,7 +257,7 @@ nnoremap è [
 nnoremap + ]
 vnoremap è [
 vnoremap + ]
-nnoremap 5 %
-vnoremap 5 %
-nnoremap 7 /
-vnoremap 7 /
+nnoremap à %
+vnoremap à %
+nnoremap ò /
+vnoremap ò /
