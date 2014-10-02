@@ -37,6 +37,11 @@ Plugin 'bling/vim-airline'
 "
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
+"
+" matchit.vim
+"
+Plugin 'matchit.zip'
+
 
 " ============================================================================
 
