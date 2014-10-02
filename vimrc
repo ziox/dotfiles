@@ -218,7 +218,7 @@ map <S-H> gT
 map <S-L> gt
 
 " Substitute
-nnoremap <leader>s :%s//<left>
+nnoremap <leader>x :%s//<left>
 
 " Toggle search highlighting
 nmap <silent> <Leader><space> :nohlsearch<CR>
