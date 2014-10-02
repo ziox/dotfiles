@@ -245,7 +245,7 @@ nnoremap ` '
 nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>ev :tabe $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 
