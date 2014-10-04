@@ -51,6 +51,9 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
+;; Load packages settings
+(load "~/.emacs.d/init-packages.el")
+
 ;; GUI Specific settings
 (when (display-graphic-p)
   (load "~/.emacs.d/init-gui.el"))

@@ -5,5 +5,8 @@
 (depends-on "cask")
 (depends-on "color-theme-sanityinc-solarized")
 (depends-on "exec-path-from-shell")
+(depends-on "ido-ubiquitous")
+(depends-on "ido-vertical-mode")
 (depends-on "pallet")
+(depends-on "smex")
 (depends-on "use-package")
