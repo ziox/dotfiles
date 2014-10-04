@@ -41,6 +41,11 @@
 (set-face-background 'whitespace-trailing "#FF0000")
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
+;; Disable backup and auto-save
+(setq backup-inhibited t)
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+
 ;; GUI Specific settings
 (when (display-graphic-p)
   (load "~/.emacs.d/init-gui.el"))
