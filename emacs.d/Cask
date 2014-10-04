@@ -6,3 +6,4 @@
 (depends-on "color-theme-sanityinc-solarized")
 (depends-on "exec-path-from-shell")
 (depends-on "pallet")
+(depends-on "use-package")
