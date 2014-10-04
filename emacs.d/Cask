@@ -9,4 +9,5 @@
 (depends-on "ido-vertical-mode")
 (depends-on "pallet")
 (depends-on "smex")
+(depends-on "undo-tree")
 (depends-on "use-package")
