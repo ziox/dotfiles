@@ -27,6 +27,11 @@
 (line-number-mode 1)
 (column-number-mode 1)
 
+;; Interactive Mode
+(ido-mode t)
+(setq ido-enable-flex-matching t)
+(setq ido-enable-last-directory-history nil)
+
 ;; Turn off the fucking bell
 (setq ring-bell-function 'ignore)
 
