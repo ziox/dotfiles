@@ -38,6 +38,9 @@
 ;; Fast echoing
 (setq echo-keystrokes 0.02)
 
+;; Overwrite the selection! WTF!
+(delete-selection-mode t)
+
 ;; Tabs and Spaces
 (setq-default indent-tabs-mode nil)
 (setq tab-width 4)
