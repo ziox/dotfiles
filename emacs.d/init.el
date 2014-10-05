@@ -26,6 +26,8 @@
 ;; Line and column numbers
 (line-number-mode 1)
 (column-number-mode 1)
+(global-linum-mode 1)
+(setq linum-format "%4d")
 
 ;; Interactive Mode
 (ido-mode t)
