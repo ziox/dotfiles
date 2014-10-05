@@ -8,6 +8,7 @@
 (depends-on "ido-ubiquitous")
 (depends-on "ido-vertical-mode")
 (depends-on "pallet")
+(depends-on "smartparens")
 (depends-on "smex")
 (depends-on "undo-tree")
 (depends-on "use-package")

@@ -9,6 +9,14 @@
 (use-package ido-ubiquitous
   :init (setq ido-everywhere t))
 
+(use-package smartparens
+  :config
+  (progn
+    (require 'smartparens-config)
+    (setq sp-autoescape-string-quote nil)
+    (show-smartparens-global-mode t))
+  :init (smartparens-global-mode t))
+
 (use-package smex
   :bind (("M-x" . smex)
          ("M-X" . smex-major-mode-commands)
