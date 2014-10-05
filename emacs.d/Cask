@@ -4,6 +4,7 @@
 
 (depends-on "cask")
 (depends-on "color-theme-sanityinc-solarized")
+(depends-on "evil")
 (depends-on "exec-path-from-shell")
 (depends-on "ido-ubiquitous")
 (depends-on "ido-vertical-mode")

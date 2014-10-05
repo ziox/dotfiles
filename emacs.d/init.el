@@ -9,7 +9,7 @@
 ;; Theme
 ;; https://github.com/bbatsov/zenburn-emacs
 (load-theme 'sanityinc-solarized-dark t)
-(set-cursor-color "firebrick")
+(set-cursor-color "lightgreen")
 
 ;; GUI fonts
 (when (display-graphic-p)

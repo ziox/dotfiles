@@ -1,5 +1,16 @@
 (require 'use-package)
 
+(use-package evil
+  :init
+  (progn
+    (evil-mode 1)
+    (setq evil-emacs-state-cursor '("green" box))
+    (setq evil-normal-state-cursor '("firebrick" box))
+    (setq evil-visual-state-cursor '("firebrick" hbar))
+    (setq evil-insert-state-cursor '("firebrick" bar))
+    (setq evil-replace-state-cursor '("red" hollow))
+    (setq evil-operator-state-cursor '("red" hollow))))
+
 (use-package ido-vertical-mode
   :init
   (progn
