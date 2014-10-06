@@ -28,6 +28,7 @@
   (progn
     (require 'smartparens-config)
     (setq sp-autoescape-string-quote nil)
+    (setq sp-autoskip-closing-pair 'always)
     (show-smartparens-global-mode t))
   :init (smartparens-global-mode t))
 
