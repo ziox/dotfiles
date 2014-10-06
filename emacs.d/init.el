@@ -67,3 +67,7 @@
 (when (eq system-type 'darwin)
   (load "~/.emacs.d/init-osx.el"))
 
+;; Languages
+(add-to-list 'load-path "~/.emacs.d/languages")
+(require 'language-c)
+
