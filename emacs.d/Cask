@@ -4,6 +4,7 @@
 
 (depends-on "cask")
 (depends-on "color-theme-sanityinc-solarized")
+(depends-on "company")
 (depends-on "evil")
 (depends-on "exec-path-from-shell")
 (depends-on "helm")
@@ -13,3 +14,4 @@
 (depends-on "smex")
 (depends-on "undo-tree")
 (depends-on "use-package")
+(depends-on "yasnippet")

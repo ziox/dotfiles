@@ -1,5 +1,8 @@
 (require 'use-package)
 
+(use-package company
+  :init (global-company-mode))
+
 (use-package evil
   :init
   (progn
@@ -36,6 +39,9 @@
   :bind (("M-x" . smex)
          ("M-X" . smex-major-mode-commands)
          ("C-c C-c M-x" . execute-extended-command)))
+
+(use-package yasnippet
+  :init (yas-global-mode 1))
 
 (use-package undo-tree
   :init (global-undo-tree-mode 1)

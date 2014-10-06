@@ -16,5 +16,5 @@
 (setq ns-pop-up-frames nil)
 
 ;; Some usefull key-bindings
-(global-set-key (kbd "s-p") 'smex)
+(global-set-key (kbd "s-p") 'helm-M-x)
 (global-set-key (kbd "s-P") 'smex-major-mode-commands)
