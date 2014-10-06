@@ -11,14 +11,17 @@
     (setq evil-replace-state-cursor '("red" hollow))
     (setq evil-operator-state-cursor '("red" hollow))))
 
+(use-package helm
+  :init (require 'helm-config)
+  :config (set-face-attribute 'helm-selection nil :background "#441100")
+  :bind (("s-t" . helm-mini)
+         ("C-x b" . helm-mini)))
+
 (use-package ido-vertical-mode
   :init
   (progn
     (ido-vertical-mode 1)
     (setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)))
-
-(use-package ido-ubiquitous
-  :init (setq ido-everywhere t))
 
 (use-package smartparens
   :config

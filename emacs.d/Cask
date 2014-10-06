@@ -6,7 +6,7 @@
 (depends-on "color-theme-sanityinc-solarized")
 (depends-on "evil")
 (depends-on "exec-path-from-shell")
-(depends-on "ido-ubiquitous")
+(depends-on "helm")
 (depends-on "ido-vertical-mode")
 (depends-on "pallet")
 (depends-on "smartparens")
