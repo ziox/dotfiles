@@ -19,6 +19,7 @@
          ("\\.cmake\\'" . cmake-mode)))
 
 (use-package evil
+  :disabled
   :init
   (progn
     (evil-mode 1)
@@ -40,15 +41,15 @@
   (progn
     (ido-vertical-mode 1)
     (setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)))
-
+()
 (use-package smartparens
-  :config
+  :init
   (progn
     (require 'smartparens-config)
     (setq sp-autoescape-string-quote nil)
-    (setq sp-autoskip-closing-pair 'always)
-    (show-smartparens-global-mode t))
-  :init (smartparens-global-mode t))
+    (setq-default sp-autoskip-closing-pair 'always)
+    (smartparens-global-mode t)
+    (show-smartparens-global-mode t)))
 
 (use-package smex
   :bind (("M-x" . smex)
