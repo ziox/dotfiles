@@ -3,6 +3,7 @@
 (source melpa)
 
 (depends-on "cask")
+(depends-on "cmake-mode")
 (depends-on "color-theme-sanityinc-solarized")
 (depends-on "company")
 (depends-on "company-c-headers")
