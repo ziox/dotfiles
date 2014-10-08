@@ -15,7 +15,20 @@
 
 (setq ns-pop-up-frames nil)
 
+;;
 ;; Some usefull key-bindings
-(global-set-key (kbd "s-p") 'smex)
-(global-set-key (kbd "s-P") 'smex-major-mode-commands)
+;;
+
+; Smex
+(bind-key "s-p" 'smex)
+(bind-key "s-P" 'smex-major-mode-commands)
+
+; Text
+(bind-key "s-d" 'kill-whole-line)
+
+; Movements
+(bind-key "<s-left>" 'move-beginning-of-line)
+(bind-key "<s-right>" 'move-end-of-line)
+(bind-key "<s-up>" 'beginning-of-buffer)
+(bind-key "<s-down>" 'end-of-buffer)
 
