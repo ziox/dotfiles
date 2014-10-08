@@ -1,7 +1,18 @@
 (require 'use-package)
 
 (use-package company
-  :init (global-company-mode))
+  :init
+  (progn
+    (global-company-mode)
+    (define-key company-active-map (kbd "C-n") 'company-select-next)
+    (define-key company-active-map (kbd "C-p") 'company-select-previous)
+    (define-key company-active-map (kbd "ESC") 'company-abort)
+    (add-to-list 'company-backends 'company-c-headers)
+    (setq company-clang-arguments '("-std=c++11" "-stdlib=libc++")))
+  :bind ("<C-tab>" . company-complete))
+
+(use-package company-c-headers
+  :init (add-to-list 'company-c-headers-path-system "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1"))
 
 (use-package evil
   :init

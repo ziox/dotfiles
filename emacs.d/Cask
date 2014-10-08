@@ -5,6 +5,7 @@
 (depends-on "cask")
 (depends-on "color-theme-sanityinc-solarized")
 (depends-on "company")
+(depends-on "company-c-headers")
 (depends-on "evil")
 (depends-on "exec-path-from-shell")
 (depends-on "helm")
