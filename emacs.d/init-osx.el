@@ -35,3 +35,9 @@
 (bind-key "<s-up>" 'beginning-of-buffer)
 (bind-key "<s-down>" 'end-of-buffer)
 
+; Buffers, Windows and Frames
+(bind-key "s-o" 'ido-find-file)
+(bind-key "s-w" 'kill-this-buffer)
+(bind-key "s-_" 'split-window-below)
+(bind-key "s-|" 'split-window-right)
+(bind-key "s-W" 'delete-frame)
