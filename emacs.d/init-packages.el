@@ -36,6 +36,12 @@
   :bind (("s-t" . helm-mini)
          ("C-x b" . helm-mini)))
 
+(use-package helm-ag
+  :init
+  (progn
+    (setq helm-ag-base-command "ag --nocolor --nogroup --ignore-case")
+    (setq helm-ag-command-option "--all-text")))
+
 (use-package ido-vertical-mode
   :init
   (progn
