@@ -10,6 +10,7 @@
 (depends-on "evil")
 (depends-on "exec-path-from-shell")
 (depends-on "helm")
+(depends-on "helm-ag")
 (depends-on "ido-vertical-mode")
 (depends-on "pallet")
 (depends-on "smartparens")

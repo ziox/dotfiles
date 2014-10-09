@@ -26,6 +26,9 @@
 ; Text
 (bind-key "s-d" 'kill-whole-line)
 
+; Search
+(bind-key "s-F" 'helm-ag)
+
 ; Movements
 (bind-key "<s-left>" 'move-beginning-of-line)
 (bind-key "<s-right>" 'move-end-of-line)
