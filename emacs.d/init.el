@@ -45,7 +45,7 @@
 
 ;; Tabs and Spaces
 (setq-default indent-tabs-mode nil)
-(setq tab-width 4)
+(setq-default tab-width 4)
 (setq whitespace-style (quote (face trailing tab-mark)))
 (global-whitespace-mode)
 (set-face-background 'whitespace-trailing "#FF0000")
