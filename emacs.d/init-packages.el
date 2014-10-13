@@ -30,6 +30,14 @@
     (setq evil-replace-state-cursor '("red" hollow))
     (setq evil-operator-state-cursor '("red" hollow))))
 
+(use-package haskell-mode
+  :init
+  (progn
+    (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+    (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation))
+  :bind (("C-," . haskell-move-nested-left)
+         ("C-." . haskell-move-nested-right)))
+
 (use-package helm
   :init (require 'helm-config)
   :config (set-face-attribute 'helm-selection nil :background "#441100")
