@@ -1,4 +1,4 @@
-(require 'cask "/usr/local/Cellar/cask/0.7.2/cask.el")
+(require 'cask)
 (cask-initialize)
 
 ;; Keeps ~Cask~ file in sync with the packages
