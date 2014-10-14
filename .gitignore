@@ -2,3 +2,4 @@ vim/bundle/
 vim/tmp/
 vim/.netrwhist
 emacs.d/.cask/
+emacs.d/init-local.el

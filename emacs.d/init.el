@@ -71,3 +71,7 @@
 (add-to-list 'load-path "~/.emacs.d/languages")
 (require 'language-c)
 
+;; Local configurations
+(when (file-exists-p "~/.emacs.d/init-local.el")
+  (load "~/.emacs.d/init-local.el"))
+
