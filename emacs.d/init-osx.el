@@ -1,6 +1,7 @@
 ;; Mac specific settings
 
 ;; Sets paths from shell in OS X
+(use-package exec-path-from-shell :ensure)
 (exec-path-from-shell-initialize)
 
 (setq ns-right-alternate-modifier nil)

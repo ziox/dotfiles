@@ -1,5 +1,5 @@
 vim/bundle/
 vim/tmp/
 vim/.netrwhist
-emacs.d/.cask/
+emacs.d/packages/
 emacs.d/init-local.el

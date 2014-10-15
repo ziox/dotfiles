@@ -1,10 +1,14 @@
-(require 'cask)
-(cask-initialize)
+(require 'package)
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
 
-;; Keeps ~Cask~ file in sync with the packages
-;; that you install/uninstall via ~M-x list-packages~
-;; https://github.com/rdallasgray/pallet
-(require 'pallet)
+(setq package-user-dir "~/.emacs.d/packages/")
+(package-initialize)
+
+(unless (package-installed-p 'use-package)
+  (progn (package-refresh-contents)
+         (package-install 'use-package)))
 
 ;; Disable menu, tool bar and scroll bar
 (menu-bar-mode -1)
