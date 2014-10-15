@@ -6,15 +6,6 @@
 ;; https://github.com/rdallasgray/pallet
 (require 'pallet)
 
-;; Theme
-;; https://github.com/bbatsov/zenburn-emacs
-(load-theme 'sanityinc-solarized-dark t)
-(set-cursor-color "lightgreen")
-
-;; GUI fonts
-(when (display-graphic-p)
-  (set-frame-font "Source Code Pro-18" nil t))
-
 ;; Disable menu, tool bar and scroll bar
 (menu-bar-mode -1)
 (tool-bar-mode -1)
