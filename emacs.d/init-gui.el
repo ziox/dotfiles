@@ -5,7 +5,6 @@
 (use-package color-theme-sanityinc-solarized :ensure)
 (load-theme 'sanityinc-solarized-dark t)
 (set-cursor-color "lightgreen")
-(set-frame-font "Source Code Pro-18" nil t)
 
 ;; Linum Mode
 (global-linum-mode 1)
