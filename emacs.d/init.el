@@ -33,6 +33,9 @@
 ;; Fast echoing
 (setq echo-keystrokes 0.02)
 
+;; Stop blinking!
+(setq blink-matching-paren nil)
+
 ;; Overwrite the selection! WTF!
 (delete-selection-mode t)
 
