@@ -17,6 +17,10 @@
 (setq ns-pop-up-frames nil)
 
 ;;
+
+(add-to-list 'company-c-headers-path-system "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1")
+
+;;
 ;; Some usefull key-bindings
 ;;
 

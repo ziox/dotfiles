@@ -11,8 +11,7 @@
     (setq company-clang-arguments '("-std=c++11" "-stdlib=libc++")))
   :bind ("<C-tab>" . company-complete))
 
-(use-package company-c-headers :ensure
-  :init (add-to-list 'company-c-headers-path-system "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1"))
+(use-package company-c-headers :ensure)
 
 (use-package company-ghc :ensure)
 
