@@ -1,6 +1,27 @@
 (require 'use-package)
 
-(use-package company :ensure
+(use-package auto-complete :ensure
+  :init
+  (progn
+    (require 'auto-complete-config)
+    (ac-config-default)
+    (setq ac-ignore-case 'smart)
+    (setq ac-auto-start 3)
+    (setq ac-auto-show-menu 1.5)
+    (setq ac-quick-help-delay 1.5)
+    (setq ac-use-menu-map t)
+    (define-key ac-menu-map (kbd "C-n") 'ac-next)
+    (define-key ac-menu-map (kbd "C-p") 'ac-previous)))
+
+(use-package ac-c-headers :ensure)
+(use-package irony :ensure)
+(add-to-list 'load-path "~/.emacs.d/packages/ac-irony/")
+(require 'ac-irony)
+
+(defun ac-cc-mode-setup ()
+  (setq ac-sources (append '(ac-source-irony ac-source-c-headers ac-source-yasnippet) ac-sources)))
+
+(use-package company :disabled
   :init
   (progn
     (global-company-mode)
@@ -11,9 +32,9 @@
     (setq company-clang-arguments '("-std=c++11" "-stdlib=libc++")))
   :bind ("<C-tab>" . company-complete))
 
-(use-package company-c-headers :ensure)
+(use-package company-c-headers :disabled)
 
-(use-package company-ghc :ensure)
+(use-package company-ghc :disabled)
 
 (use-package cmake-mode :ensure
   :mode (("CMakeLists\\.txt\\'" . cmake-mode)
@@ -72,7 +93,12 @@
          ("C-c C-c M-x" . execute-extended-command)))
 
 (use-package yasnippet :ensure
-  :init (yas-global-mode 1))
+  :init
+  (progn
+    (yas-global-mode 1)
+    (define-key yas-minor-mode-map (kbd "<tab>") nil)
+    (define-key yas-minor-mode-map (kbd "TAB") nil)
+    (define-key yas-minor-mode-map (kbd "<C-tab>") 'yas-expand)))
 
 (use-package undo-tree :ensure
   :init (global-undo-tree-mode 1)

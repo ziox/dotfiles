@@ -2,4 +2,6 @@ vim/bundle/
 vim/tmp/
 vim/.netrwhist
 emacs.d/packages/
+emacs.d/irony/
 emacs.d/init-local.el
+emacs.d/ac-comphist.dat
