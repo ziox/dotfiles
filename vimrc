@@ -53,7 +53,6 @@ set softtabstop=4                   " Deleting all the <space>s at once
 
 " Be smart about tab and indent
 set autoindent
-set smartindent
 set smarttab
 set shiftround
 
