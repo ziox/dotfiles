@@ -61,7 +61,7 @@ set shiftround
 set textwidth=120
 set formatoptions=qn1
 set colorcolumn=+1,+2,+3            " Color 3 columns after textwidth
-set showbreak=↪                    " Display line break visually
+set showbreak=↪                     " Display line break visually
 set linebreak                       " Wrap lines at convenient points
 
 " Search
@@ -285,3 +285,4 @@ nnoremap à %
 vnoremap à %
 nnoremap ò /
 vnoremap ò /
+
