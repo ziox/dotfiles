@@ -38,6 +38,11 @@ Plugin 'bling/vim-airline'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 "
+" A fast, as-you-type, fuzzy-search code completion engine for Vim
+"
+Plugin 'Valloric/YouCompleteMe'
+
+"
 " matchit.vim
 "
 Plugin 'matchit.zip'
