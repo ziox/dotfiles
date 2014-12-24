@@ -217,16 +217,6 @@ endfunction
 
 let mapleader = ','
 
-" Disable those arrow keys!
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-vnoremap <Up> <NOP>
-vnoremap <Down> <NOP>
-vnoremap <Left> <NOP>
-vnoremap <Right> <NOP>
-
 " Make capitals behave
 nnoremap D d$
 nnoremap Y y$
