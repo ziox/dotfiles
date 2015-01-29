@@ -3,7 +3,8 @@
 ;; Theme & Fonts
 ; https://github.com/bbatsov/zenburn-emacs
 (use-package color-theme-sanityinc-solarized :ensure)
-(load-theme 'sanityinc-solarized-dark t)
+; (load-theme 'sanityinc-solarized-dark t)
+(load-theme 'misterioso)
 (set-cursor-color "lightgreen")
 
 ;; Linum Mode
