@@ -33,9 +33,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 
 "
-" Additional vim c++ syntax highlighting
+" A collection of language packs for Vim.
 "
-Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'sheerun/vim-polyglot'
 
 "
 " A fast, as-you-type, fuzzy-search code completion engine for Vim
