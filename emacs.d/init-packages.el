@@ -106,6 +106,8 @@
          ("M-X" . smex-major-mode-commands)
          ("C-c C-c M-x" . execute-extended-command)))
 
+(use-package yaml-mode :ensure)
+
 (use-package yasnippet :ensure
   :init
   (progn
@@ -117,5 +119,3 @@
 (use-package undo-tree :ensure
   :init (global-undo-tree-mode 1)
   :bind ("s-Z" . redo))
-
-(use-package yaml-mode :ensure)
