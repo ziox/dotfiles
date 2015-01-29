@@ -84,6 +84,14 @@
     (ido-vertical-mode 1)
     (setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)))
 
+(use-package neotree :ensure
+  :init
+  (progn
+    (require 'neotree)
+    (global-set-key [f8] 'neotree-toggle)))
+
+(use-package projectile :ensure)
+
 (use-package smartparens :ensure
   :init
   (progn
