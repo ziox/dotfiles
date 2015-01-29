@@ -40,6 +40,12 @@
   :mode (("CMakeLists\\.txt\\'" . cmake-mode)
          ("\\.cmake\\'" . cmake-mode)))
 
+(use-package enh-ruby-mode :ensure
+  :init
+  (progn
+    (require 'ruby-mode)
+    (remove-hook 'enh-ruby-mode-hook 'erm-define-faces)))
+
 (use-package evil
   :disabled
   :init
