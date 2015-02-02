@@ -95,7 +95,10 @@
 (use-package robe :ensure
   :config (add-hook 'robe-mode-hook 'ac-robe-setup))
 
-(use-package projectile :ensure)
+(use-package projectile :ensure
+  :init
+  (progn
+    (projectile-global-mode)))
 
 (use-package rvm :ensure
   :init (rvm-use-default))
