@@ -44,7 +44,9 @@
   :init
   (progn
     (require 'ruby-mode)
-    (remove-hook 'enh-ruby-mode-hook 'erm-define-faces)))
+;    (remove-hook 'enh-ruby-mode-hook 'erm-define-faces)
+    (add-hook 'enh-ruby-mode-hook 'robe-mode)
+    (add-hook 'enh-ruby-mode-hook 'auto-complete-mode)))
 
 (use-package evil
   :disabled
@@ -90,7 +92,13 @@
     (require 'neotree)
     (global-set-key [f8] 'neotree-toggle)))
 
+(use-package robe :ensure
+  :config (add-hook 'robe-mode-hook 'ac-robe-setup))
+
 (use-package projectile :ensure)
+
+(use-package rvm :ensure
+  :init (rvm-use-default))
 
 (use-package smartparens :ensure
   :init
