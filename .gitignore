@@ -7,3 +7,4 @@ emacs.d/irony/
 emacs.d/init-local.el
 emacs.d/ac-comphist.dat
 emacs.d/projectile-bookmarks.eld
+nvim/
