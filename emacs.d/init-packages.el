@@ -130,3 +130,9 @@
 (use-package undo-tree :ensure
   :init (global-undo-tree-mode 1)
   :bind ("s-Z" . redo))
+
+(use-package ycmd :disabled
+  :init
+  (progn
+    (require 'ycmd)
+    (ycmd-setup)))
