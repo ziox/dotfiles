@@ -28,6 +28,18 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 
 "
+" Bad Wolf
+" A color scheme for Vim, pieced together by Steve Losh.
+"
+Plugin 'sjl/badwolf'
+
+"
+" ctrlp.vim
+" Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
+"
+Plugin 'kien/ctrlp.vim'
+
+"
 " Lean & mean status/tabline for vim that's light as air.
 "
 Plugin 'bling/vim-airline'
@@ -46,11 +58,6 @@ Plugin 'Valloric/YouCompleteMe'
 " matchit.vim
 "
 Plugin 'matchit.zip'
-
-"
-" Ack!
-"
-Plugin 'mileszs/ack.vim'
 
 "
 " Ag!

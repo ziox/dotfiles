@@ -1,7 +1,10 @@
 " Use Vim settings, rather then Vi settings (be iMproved!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-set modelines=0                     " For security reason :/
+" set modelines=0                     " For security reason :/
+set modeline
+set modelines=3
+
 
 " ============================================================================
 " Vundle
@@ -15,13 +18,12 @@ endif
 
 
 " ============================================================================
-" Appearance
+" UI
 " ============================================================================
 
 set t_Co=256
-let g:solarized_termcolors=16
 set background=dark
-colorscheme solarized
+colorscheme badwolf
 
 set number
 set numberwidth=5
@@ -39,11 +41,6 @@ set sidescroll=1
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:»·,trail:·
-
-
-" ============================================================================
-" Behavior
-" ============================================================================
 
 " Indentation
 set tabstop=4                       " A real <TAB> width
@@ -63,17 +60,6 @@ set colorcolumn=+1,+2,+3            " Color 3 columns after textwidth
 set showbreak=↪                     " Display line break visually
 set linebreak                       " Wrap lines at convenient points
 
-" Search
-set incsearch                       " Show search matches as you type
-set hlsearch                        " Highlight search terms
-set ignorecase
-set smartcase
-set showmatch
-
-" Use Perl-like regular-expressions
-nnoremap / /\v
-vnoremap / /\v
-
 set autoread                        " Reload files changed outside vim
 set encoding=utf-8                  " UTF-8 encoding
 set backspace=indent,eol,start      " Allow backspace in insert mode
@@ -89,19 +75,6 @@ set lazyredraw
 
 set visualbell
 set noerrorbells
-
-" Completion
-set wildmode=list:longest,full
-set wildmenu
-
-" Stuff to ignore when tab completing
-set wildignore=*.o,*.obj,*~
-set wildignore+=*vim/tmp**
-set wildignore+=*DS_Store*
-set wildignore+=*.gem
-set wildignore+=log/**
-set wildignore+=tmp/**
-set wildignore+=*.png,*.jpg,*.gif
 
 " Undo
 silent !mkdir -p ~/.vim/tmp/undo > /dev/null 2>&1
@@ -120,7 +93,8 @@ set backup
 " Folding
 set foldmethod=indent               " Fold based on indent
 set foldnestmax=3                   " Deepest fold is 3 levels
-set nofoldenable                    " Don't fold by default
+set foldenable                      " Don't fold by default
+set foldlevelstart=10               " Open most folds by default
 
 set splitbelow
 set splitright
@@ -128,6 +102,39 @@ set splitright
 filetype plugin on
 filetype indent on
 syntax on
+
+
+" ============================================================================
+" Search
+" ============================================================================
+
+" Search
+set incsearch                       " Show search matches as you type
+set hlsearch                        " Highlight search terms
+set ignorecase
+set smartcase
+set showmatch
+
+" Use Perl-like regular-expressions
+nnoremap / /\v
+vnoremap / /\v
+
+
+" ============================================================================
+" Completion
+" ============================================================================
+"
+set wildmode=list:longest,full
+set wildmenu
+
+" Stuff to ignore when tab completing
+set wildignore=*.o,*.obj,*~
+set wildignore+=*vim/tmp**
+set wildignore+=*DS_Store*
+set wildignore+=*.gem
+set wildignore+=log/**
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif
 
 
 " ============================================================================
@@ -140,27 +147,30 @@ syntax on
 runtime macros/matchit.vim
 
 "
+" CtrlP
+"
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 'ra'
+" let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+"
 " vim-airline
 "
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+
 let g:airline_symbols.linenr = '⭡ '
 let g:airline_symbols.branch = '⭠'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_symbols.readonly = '⭤'
-
-let g:airline_theme='simple'
-
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
 
 
 "
@@ -193,10 +203,6 @@ augroup trailingspaces
   autocmd BufWrite * if ! &bin | :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")')) | endif
 augroup END
 
-" Sudo to write
-" w!! to write a file as sudo
-cmap w!! w !sudo tee % >/dev/null
-
 " Use Q to intelligently close a window
 " (if there are multiple windows into the same buffer)
 " or kill the buffer entirely if it's the last window looking into that buffer
@@ -215,7 +221,8 @@ endfunction
 " Key-mapping
 " ============================================================================
 
-let mapleader = ','
+nnoremap <space> <nop>
+let mapleader = ' '
 
 " Make capitals behave
 nnoremap D d$

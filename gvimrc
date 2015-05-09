@@ -3,6 +3,18 @@ set guifont=Source\ Code\ Pro:h18
 set lines=40
 set columns=120
 
+"
+" vim-airline
+"
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+
 " Map Command-# to switch tabs
 map  <D-0> 0gt
 imap <D-0> <Esc>0gt
